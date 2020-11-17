@@ -1,38 +1,97 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+  background-color: #d6f5d5;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app__header {
+  border-bottom: 1px solid lightblue;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background-color: #d6f5d5;
+  z-index: 1;
+  align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app__headerimage {
+  object-fit: contain;
+  width: 100px;
+  margin: 0 20px;
+  /* margin-top: 10px; */
+}
+
+.app__button {
   display: flex;
   flex-direction: column;
+  padding: 20px 60px;
+  letter-spacing: 3px;
+  background: rgb(15, 20, 0);
+  color: #36ffc1;
+  font-weight: bold;
+  border-radius: 5px;
+  border: 1px solid #36ffc1;
+  transition: 0.3s;
+}
+
+.app__modalbutton {
+  margin-top: 20px !important;
+  font-size: 18px;
+  padding: 1em 2.4em;
+  font-weight: 700;
+  letter-spacing: 2px;
+  background: transparent;
+  border: 2px solid #2dffc0;
+  transition: 250ms ease-in-out;
+}
+
+.app__afterlogin {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.app__modalbutton:hover {
   color: white;
+  box-shadow: 0 0 50px #2dffc0 inset, 0 0 10px #2dffc0;
 }
 
-.App-link {
-  color: #61dafb;
+.app__modal {
+  position: absolute;
+  width: 500px;
+  border: none !important;
+  background-color: whitesmoke;
+
+  /* // boxShadow: theme.shadows[5], */
+  padding: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app__button:hover {
+  background: #36ffc1;
+  color: #000;
+  box-shadow: 0 0 5px #36ffc1, 0 0 25px #36ffc1, 0 0 50px #36ffc1;
+}
+
+.app__signup {
+  display: flex;
+  flex-direction: column;
+}
+.app__postsright {
+  margin-left: 20px;
+}
+
+.app__posts {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.app__headername {
+  font-family: "Bangers", cursive;
+  text-transform: uppercase;
+  font-size: 30px;
+
+  color: #508f78;
 }
